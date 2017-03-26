@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App13"
+             x:Class="App13.MainPage">
+    <ListView x:Name="Mainlistview "
+              HasUnevenRows="True"
+              Header=""
+              Footer="">
+        <ListView.HeaderTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label FontSize="34" Text="The Header" BackgroundColor="Blue"/>
+                </Grid>
+            </DataTemplate>
+        </ListView.HeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding .}" FontSize="30"></Label>
+                    </Grid>
+                </ViewCell> 
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.FooterTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label Text="The Footer" BackgroundColor="Navy" FontSize="34" TextColor="White"/>
+                </Grid>
+            </DataTemplate>
+        </ListView.FooterTemplate>
+    </ListView>
+    
+    
+</ContentPage>
